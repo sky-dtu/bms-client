@@ -70,6 +70,10 @@ export default function Navbar() {
 								Logout
 							</button>
 						</div>
+						<div className='col-2 rounded rounded-3 bg-success py-1 text-white fw-bold'>
+							<span>{'User ' + userReducer.username}</span>
+						</div>
+						
 					</div>
 				</div>
 			</div>
