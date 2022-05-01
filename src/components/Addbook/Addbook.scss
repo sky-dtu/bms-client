@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
+$primary-bg-color: #ff4406ee;
+$secondary-bg-color: #807182;
+$font-color: rgba(0, 0, 0, 0.8);
+$font-family: "Montserrat", sans-serif;
+$form-border-color: rgba(0, 0, 0, 0.1);
+
+.AddbookContainer {
+	align-items: center;
+	background: #d8aa96;
+	color: $font-color;
+	display: grid;
+	font-family: $font-family;
+	font-size: 14px;
+	font-weight: 400;
+	height: 100vh;
+	margin-top: 4rem;
+	justify-items: center;
+	width: 100vw;
+
+	.form-container {
+		display: grid;
+		grid-template-areas: "left right";
+		max-width: 900px;
+	}
+
+	.left-container {
+		background: $secondary-bg-color;
+		overflow: hidden;
+		padding: 40px 0 0 0;
+		position: relative;
+		text-align: center;
+		width: 300px;
+
+		& h1 {
+			color: $font-color;
+			display: inline-block;
+			font-size: 24px;
+
+			& i {
+				background: $primary-bg-color;
+				border-radius: 50%;
+				color: $secondary-bg-color;
+				font-size: 24px;
+				margin-right: 5px;
+				padding: 10px;
+				transform: rotate(-45deg);
+			}
+		}
+
+		.book {
+			bottom: -5px;
+			position: absolute;
+			text-align: center;
+
+			&:before {
+				background: $secondary-bg-color;
+				content: "";
+				height: 100%;
+				left: 0;
+				opacity: 0.4;
+				position: absolute;
+				width: 100%;
+				z-index: 1;
+			}
+		}
+
+		img {
+			filter: sepia(100%);
+			width: 70%;
+		}
+	}
+
+	.right-container {
+		background: lighten($primary-bg-color, 5%);
+		display: grid;
+		grid-template-areas: "." ".";
+		width: 500px;
+
+		.field-container {
+			margin-top: 1rem;
+		}
+
+		& h1:nth-of-type(1) {
+			color: $font-color;
+			font-size: 28px;
+			font-weight: 600;
+		}
+
+		& .set {
+			display: flex;
+			justify-content: space-between;
+			margin: 1rem 0;
+		}
+
+		& input {
+			border: 1px solid $form-border-color;
+			border-radius: 4px;
+			height: 38px;
+			line-height: 38px;
+			padding-left: 5px;
+		}
+
+		& input,
+		label {
+			color: $font-color;
+		}
+
+		& header {
+			padding: 40px;
+		}
+
+		& label,
+		input {
+			width: 100%;
+		}
+
+		footer {
+			align-items: center;
+			background: #fff;
+			display: grid;
+			padding: 5px 40px;
+
+			& button {
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				height: 38px;
+				line-height: 38px;
+				width: 100px;
+				border-radius: 19px;
+				font-family: $font-family;
+			}
+
+			& #next {
+				background: $primary-bg-color;
+				border: 1px solid transparent;
+				color: #fff;
+
+				&:hover {
+					background: $secondary-bg-color;
+				}
+			}
+		}
+	}
+}
